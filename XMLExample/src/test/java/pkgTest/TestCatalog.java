@@ -108,15 +108,4 @@ public class TestCatalog {
 		return cat;
 
 	}
-
-	// method to set our costs, 20% lower than price
-	public static Catalog calcCosts(Catalog cat, double costof) {
-		for (Book b : cat.getBooks()) {
-			double newPrice = (b.getPrice() * costof) - b.getPrice();
-			b.setCost(Math.round(newPrice * 100.0) / 100.0);
-		}
-
-		return cat;
-	}
-
 }
