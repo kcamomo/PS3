@@ -37,10 +37,10 @@ public class Catalog {
 			if (m.getId().equals(id)) {
 				b = m;
 			}
-		}
-		if (b == null) {
-			b = new Book(id);
-			throw new BookException(b);
+			if (b == null) {
+				b = new Book(id);
+				throw new BookException(b);
+			}
 		}
 		return b;
 	}
